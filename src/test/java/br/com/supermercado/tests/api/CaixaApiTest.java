@@ -28,4 +28,30 @@ public class CaixaApiTest extends BaseApiTest {
 
         assertNotNull(caixa.getData_abertura());
     }
+
+    @Test
+    public void deveConsultarCaixaAtualComSucesso() {
+
+        Caixa caixaAberto = ServiceFactory
+                .caixaService()
+                .abrirCaixa(200, token);
+
+
+        Caixa caixaAtual = ServiceFactory
+                .caixaService()
+                .consultarCaixaAtual(token);
+
+
+        assertNotNull(caixaAtual);
+
+        assertEquals(
+                caixaAberto.getId(),
+                caixaAtual.getId()
+        );
+
+        assertEquals(
+                "aberto",
+                caixaAtual.getStatus()
+        );
+    }
 }
