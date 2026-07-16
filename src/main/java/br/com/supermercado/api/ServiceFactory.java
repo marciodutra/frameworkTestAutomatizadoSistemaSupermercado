@@ -4,6 +4,7 @@ import br.com.supermercado.api.services.AuthService;
 import br.com.supermercado.api.services.CaixaService;
 import br.com.supermercado.api.services.ProdutoService;
 import br.com.supermercado.api.services.VendaService;
+import br.com.supermercado.api.services.DashboardService;
 
 public class ServiceFactory {
 
@@ -21,6 +22,10 @@ public class ServiceFactory {
 
     public static VendaService vendaService() {
         return new VendaService();
+    }
+
+    public static DashboardService dashboardService() {
+        return new DashboardService();
     }
 
 }
