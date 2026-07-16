@@ -1,4 +1,4 @@
-package br.com.supermercado.tests.report;
+package br.com.supermercado.tests.report.model;
 
 public class ResultadoTeste {
 

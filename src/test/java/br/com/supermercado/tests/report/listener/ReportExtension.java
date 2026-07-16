@@ -1,7 +1,7 @@
 package br.com.supermercado.tests.report.listener;
 
 import br.com.supermercado.tests.report.ReportManager;
-import br.com.supermercado.tests.report.ResultadoTeste;
+import br.com.supermercado.tests.report.model.ResultadoTeste;
 import org.junit.jupiter.api.extension.*;
 
 import java.time.LocalDateTime;
