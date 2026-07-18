@@ -36,3 +36,11 @@ jobs:
 
       - name: Executar testes
         run: mvn clean test
+
+      - name: Salvar relatório dos testes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-testes
+          path: |
+            target/
